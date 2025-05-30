@@ -2,19 +2,26 @@ import React from "react";
 import Hero from "./hero";
 import Product from "./product";
 import Testimoni from "./testimoni";
+import Cta from "./cta";
+import TestimonialOffWhiteGrid from "./testimonial_white_off_grid";
+import HeroV2 from "./hero_v2";
+import PriceList from "./pricelist";
 
 export default function Home() {
   return (
     <div>
       <main>
         <section id="hero">
-          <Hero />
+          <HeroV2 />
         </section>
-        <section id="product">
-          <Product />
+        <section id="pricelist">
+          <PriceList />
         </section>
         <section id="testimoni">
-          <Testimoni />
+          <TestimonialOffWhiteGrid />
+        </section>
+        <section id="cta">
+          <Cta />
         </section>
       </main>
     </div>
