@@ -1,4 +1,4 @@
-export default function Contact() {
+export default function Price() {
     return (
       <div>
         <div className="min-h-screen flex items-center justify-center min-w-screen bg-white">
@@ -6,7 +6,7 @@ export default function Contact() {
             <h1
               className="text-6xl text-center mt-8 mb-16 text-black"
             >
-              Contact Saya
+              Daftar Harga Mobil
             </h1>
             <p className="text-base text-sky-300">Loved by 1,000,000+ creators</p>
           </div>

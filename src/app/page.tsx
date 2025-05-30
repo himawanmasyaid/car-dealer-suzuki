@@ -1,5 +1,7 @@
-import Default from "@/pages/default";
+import Home from "@/pages/home/home";
 
 export default function Page() {
-  return <Default/>;
+  return(
+      <Home/>
+  ) ;
 }

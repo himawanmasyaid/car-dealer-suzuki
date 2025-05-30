@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jogja Suzuki | Promo & Penjualan Mobil Suzuki Yogyakarta – Regi Sales Resmi",
-  description: "Temukan mobil Suzuki impian Anda bersama Regi, sales resmi Suzuki Yogyakarta. Dapatkan harga terbaik, promo terbaru, cashback, dan konsultasi kredit mobil terpercaya di Jogja dan sekitarnya.",
+  title:
+    "Jogja Suzuki | Promo & Penjualan Mobil Suzuki Yogyakarta – Regi Sales Resmi",
+  description:
+    "Temukan mobil Suzuki impian Anda bersama Regi, sales resmi Suzuki Yogyakarta. Dapatkan harga terbaik, promo terbaru, cashback, dan konsultasi kredit mobil terpercaya di Jogja dan sekitarnya.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +34,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Header />
+        <main className="w-full">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
