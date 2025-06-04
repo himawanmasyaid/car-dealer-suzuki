@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Hero: React.FC = () => {
@@ -5,7 +6,7 @@ const Hero: React.FC = () => {
     <div className="flex flex-col md:flex-row w-screen h-screen bg-gradient-to-r from-pink-100 to-sky-100">
       <div className="flex flex-1 items-center justify-center p-8 text-center md:text-left">
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
             Cari Mobil Suzuki Terbaik Buat Kamu?
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-6">
@@ -20,7 +21,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-1 items-center justify-center p-6">
-        <img
+        <Image
           src="/images/regi.png"
           alt="Mobil Suzuki"
           className="w-full max-w-md md:max-w-lg object-contain"

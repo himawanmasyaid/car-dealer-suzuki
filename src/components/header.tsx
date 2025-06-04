@@ -31,16 +31,16 @@ const HeaderV3: React.FC = () => {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
             Beranda
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
             Harga Mobil
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
             Testimoni
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
             Tentang Sales
           </a>
         </PopoverGroup>
@@ -84,25 +84,25 @@ const HeaderV3: React.FC = () => {
               <div className="space-y-2 py-6">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
                 >
                   Beranda
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
                 >
                   Harga Mobil
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
                 >
                   Testimoni
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
                 >
                   Tentang Sales
                 </a>

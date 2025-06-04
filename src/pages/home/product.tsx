@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 const Product: React.FC = () => {
@@ -15,7 +16,7 @@ const Product: React.FC = () => {
             key={id}
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
-            <img
+            <Image
               src={`/car${id}.jpg`}
               alt={`Car ${id}`}
               className="w-full h-48 object-cover"

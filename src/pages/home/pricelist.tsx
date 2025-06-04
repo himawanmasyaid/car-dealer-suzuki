@@ -1,24 +1,34 @@
 import React from "react";
-import CarPriceStart from "@/components/car_price_start";
+import CarPriceStart from "@/components/card/car_price_start";
 import { cars_price_starter } from "@/data/cars";
 
 const PriceList: React.FC = () => {
   return (
-    <section id="pricelist" className="py-16 px-4 md:px-8">
-      <h2 className="text-3xl font-bold text-center mb-4">Daftar Harga Mobil</h2>
-      <p className="text-center mb-8 text-gray-600">Temukan mobil Suzuki impian Anda dengan harga terbaik.</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {cars_price_starter.map((car) => (
-          <CarPriceStart
-            key={car.name}
-            name={car.name}
-            price_start={car.price_start}
-            image={car.image}
-            category={car.category}
-          />
-        ))}
+      <div className="bg-white-50 sm:py-32 px-2">
+        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8"></div>
+
+        <h2 className="text-center text-base/7 font-semibold text-indigo-600">
+          DAFTAR HARGA
+        </h2>
+        <p className="mx-auto mt-2 text-center text-5xl font-bold tracking-tight text-balance text-gray-950 sm:text-5xl">
+            Temukan suzuki terbaikmu
+        </p>
+        <p className="mt-6 text-xl tracking-tight text-center max-lg:text-center text-gray-400">
+          Dari mobil keluarga yang nyaman sampai mobil tangguh buat petualangan
+        </p>
+
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-2">
+          {cars_price_starter.map((car) => (
+            <CarPriceStart
+              key={car.name}
+              name={car.name}
+              price_start={car.price_start}
+              image={car.image}
+              category={car.category}
+            />
+          ))}
+        </div>
       </div>
-    </section>
   );
 };
 
