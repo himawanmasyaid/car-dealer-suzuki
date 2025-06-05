@@ -2,11 +2,21 @@
 
 import { useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
-
+import { NavigationScreen } from "@/constants/navigation_screen";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { URLS } from "@/constants/constants";
+import React from "react";
 
-const HeaderV3: React.FC = () => {
+const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuItems = [
+    { label: "Beranda", href: NavigationScreen.Homepage },
+    { label: "Harga Mobil", href: NavigationScreen.Pricelist },
+    { label: "Testimoni", href: NavigationScreen.Testimoni },
+    { label: "Simulasi Kredit", href: NavigationScreen.SimulasiKredit },
+    { label: "Tentang Sales", href: NavigationScreen.About },
+  ];
 
   return (
     <header className="bg-white">
@@ -31,27 +41,19 @@ const HeaderV3: React.FC = () => {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
-            Beranda
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
-            Harga Mobil
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
-            Testimoni
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 uppercase">
-            Tentang Sales
-          </a>
+          {menuItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-sm font-semibold text-gray-900 uppercase hover:text-blue-600 transition"
+            >
+              {item.label}
+            </Link>
+          ))}
         </PopoverGroup>
-        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div> */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
+            href={URLS.CHAT_WHATSAPP}
             className="inline-flex items-center justify-center rounded-full bg-green-600 px-6 py-2 text-sm font-semibold text-white hover:bg-green-700 transition"
           >
             Hubungi Whatsapp
@@ -82,34 +84,20 @@ const HeaderV3: React.FC = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
-                >
-                  Beranda
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
-                >
-                  Harga Mobil
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
-                >
-                  Testimoni
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 uppercase"
-                >
-                  Tentang Sales
-                </a>
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50 uppercase"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}{" "}
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href={URLS.CHAT_WHATSAPP}
                   className="w-full inline-flex items-center justify-center rounded-full px-5 py-2.5 text-base font-semibold text-white bg-green-600 transition"
                 >
                   Hubungi Whatsapp
@@ -123,4 +111,4 @@ const HeaderV3: React.FC = () => {
   );
 };
 
-export default HeaderV3;
+export default Header;

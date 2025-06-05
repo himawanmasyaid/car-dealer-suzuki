@@ -4,7 +4,7 @@
 :root {
   --background: #171717;
   --foreground: #ffffff;
-  --font-sans: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif; /* Updated to use Plus Jakarta Sans */
+  --font-sans: 'Plus Jakarta Sans', sans-serif; /* Updated to use Plus Jakarta Sans */
 }
 
 @theme inline {

@@ -6,13 +6,13 @@ export const cars_price_starter = [
     href: "#",
     image: "fronx.webp",
   },
-  {
-    name: "All New Ertiga",
-    category: "MPV",
-    price_start: 241600000,
-    href: "#",
-    image: "ertiga.webp",
-  },
+  // {
+  //   name: "All New Ertiga",
+  //   category: "MPV",
+  //   price_start: 241600000,
+  //   href: "#",
+  //   image: "ertiga.webp",
+  // },
   {
     name: "XL7 Hybrid",
     category: "SUV",

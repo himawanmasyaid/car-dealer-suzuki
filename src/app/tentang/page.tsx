@@ -1,4 +1,4 @@
-export default function About() {
+export default function TentangPage() {
     return (
       <div>
         <div className="min-h-screen flex items-center justify-center min-w-screen bg-white">

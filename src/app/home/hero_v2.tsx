@@ -7,7 +7,7 @@ const HeroV2: React.FC = () => {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pt-4 lg:pr-8">
             <div className="lg:max-w-lg">
-              <h1 className="mt-2 text-4xl font-black tracking-tight text-pretty text-gray-900 sm:text-5xl">
+              <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                 Cari Mobil Suzuki Terbaik Buat Kamu?
               </h1>
               <h2 className="mt-6 text-lg/8 text-gray-600">
