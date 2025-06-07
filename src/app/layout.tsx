@@ -24,9 +24,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title:
-    "Jogja Suzuki | Promo & Penjualan Mobil Suzuki Yogyakarta – Regi Sales Resmi",
+    "Dealer Suzuki Jogja Resmi | Promo Harga Mobil Suzuki Yogyakarta Terbaru & Terbaik",
   description:
-    "Temukan mobil Suzuki impian Anda bersama Regi, sales resmi Suzuki Yogyakarta. Dapatkan harga terbaik, promo terbaru, cashback, dan konsultasi kredit mobil terpercaya di Jogja dan sekitarnya.",
+    "Cari mobil Suzuki di Jogja? Dapatkan harga, promo, dan kredit terbaik dari dealer resmi Suzuki Yogyakarta. Tersedia Suzuki Ertiga, XL7, Fronx dan model lainnya. Hubungi Regi, sales terpercaya untuk test drive sekarang!",
   icons: {
     icon: "/favicon.ico",
   },
