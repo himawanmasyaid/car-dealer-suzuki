@@ -2,7 +2,7 @@
 export const NavigationScreen = {
   Homepage: "/",
   Pricelist: "/hargamobil",
-  ProductDetail: (id: string | number) => `/detailmobil/${id}`,
+  CarDetail: (id: string | number) => `/hargamobil/detail/${id}`,
   Testimoni: "/testimoni",
   SimulasiKredit: "/simulasikredit",
   About: "/tentang",
