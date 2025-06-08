@@ -1,94 +1,106 @@
-import { DataPriceList } from "@/data/data_pricelist"; // Asumsi ini adalah sumber data mobil Anda
-import type { Metadata } from 'next';
-import Link from 'next/link';
+"use client";
 
-// Import the Client Component
-import ProductDetailsClient from './product_details_client'; // Path disesuaikan jika Anda menempatkan di folder yang sama
+import { CHAT_WHATSAPP, formatRupiah, imageAlt } from "@/constants/constants";
+import { DataPriceList } from "@/data/data_pricelist";
+import { useState } from "react";
 
-// --- Interfaces for Type Safety ---
-// Pastikan interface ini sesuai dengan struktur data Anda
-interface CarVariant {
-  type: string;
-  price: number;
-  // ... properti lain jika ada (misal: color, engine)
-}
-
-interface CarData {
-  id: string;
-  name: string;
-  image: string; // Asumsi ini adalah string path gambar
-  category: string; // Misal: SUV, MPV
-  price_start: number; // Harga awal jika tidak ada varian
-  variants: CarVariant[];
-  // ... properti lain dari objek mobil Anda
-}
-
-interface ProductPageParams {
+interface ProductDetail {
   id: string;
 }
 
-// --- generateMetadata Function (Server-side) ---
-// Ini akan dijalankan di server untuk SEO
-export async function generateMetadata({ params }: { params: ProductPageParams }): Promise<Metadata> {
-  const car: CarData | undefined = DataPriceList.find((c: CarData) => c.id === params.id);
+interface ProductOverviewPageProps {
+  params: ProductDetail;
+}
 
-  if (!car) {
-    return {
-      title: "Mobil Tidak Ditemukan | Jogja Suzuki",
-      description: "Halaman mobil yang Anda cari tidak tersedia di Dealer Resmi Suzuki Jogja.",
-    };
+export default function ProductDetail({ params }: ProductOverviewPageProps) {
+  const car = DataPriceList.find((c) => c.id === params.id);
+  const [selectedVariant, setSelectedVariant] = useState(
+    car?.variants?.[0] ?? null
+  );
+
+  if (!car || !selectedVariant) {
+    return <div>Mobil tidak ditemukan</div>;
   }
 
-  // Ambil harga dari varian pertama atau harga_start jika tidak ada varian
-  const defaultVariantPrice = car.variants.length > 0 ? car.variants[0].price : car.price_start;
-  const formattedPrice = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(defaultVariantPrice);
-  const currentYear = new Date().getFullYear();
+  return (
+    <div className="min-h-screen flex flex-col md:flex-row py-12 mb-24 px-4 md:px-8 gap-4 bg-white">
+      {/* component image  */}
+      <div className="flex-1 w-full flex items-center justify-center">
+        <img
+          src={`/images/${car.image}`}
+          alt={imageAlt(car.name)}
+          className="w-full h-auto object-contain max-h-[500px]"/>
+      </div>
 
-  return {
-    title: `Harga ${car.name} ${car.variants.length > 0 ? car.variants[0].type + ' ' : ''}Terbaru di Jogja ${currentYear} | Promo & Spesifikasi`,
-    description: `Dapatkan informasi harga terbaru, spesifikasi lengkap, dan promo spesial untuk mobil Suzuki ${car.name} di Dealer Resmi Jogja Suzuki. Harga mulai dari ${formattedPrice}. Tersedia berbagai tipe dan pilihan warna. Ajukan simulasi kredit atau pesan langsung via WhatsApp.`,
-    keywords: `harga suzuki ${car.name.toLowerCase()} jogja, jual suzuki ${car.name.toLowerCase()} yogyakarta, promo suzuki ${car.name.toLowerCase()} jogja, spesifikasi ${car.name.toLowerCase()} suzuki, cicilan ${car.name.toLowerCase()} jogja, dealer suzuki jogja ${car.name.toLowerCase()}`,
-    openGraph: {
-      title: `Harga ${car.name} Terbaru di Jogja ${currentYear} | Jogja Suzuki`,
-      description: `Info lengkap harga, spesifikasi, dan promo Suzuki ${car.name} di Yogyakarta.`,
-      url: `https://jogjasuzuki.com/harga-mobil/detail/${car.id}`, // Sesuaikan URL dengan struktur path Anda
-      images: [`/images/${car.image}`], // Asumsi gambar ada di folder public/images/
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `Harga ${car.name} Terbaru di Jogja ${currentYear} | Jogja Suzuki`,
-      description: `Info lengkap harga, spesifikasi, dan promo Suzuki ${car.name} di Yogyakarta.`,
-      images: [`/images/${car.image}`],
-    }
-  };
-}
+      {/* component car information  */}
+      <div className="flex-1">
+        {/* <h1 className="text-4xl font-bold">{car.name}</h1> */}
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+          Suzuki {car.name} {selectedVariant?.type || ""}
+        </h1>
 
-// --- ProductOverview Server Component ---
-// Komponen ini mengambil data dan meneruskannya ke Client Component
-export default function ProductOverview({ params }: { params: ProductPageParams }) {
-  const car: CarData | undefined = DataPriceList.find((c: CarData) => c.id === params.id);
+        <p className="text-1xl sm:text-4xl mt-6 font-bold text-gray-800">
+          {formatRupiah(selectedVariant.price)}
+          <span className="text-lg text-gray-500 font-normal ml-2">
+            {" "}
+            (OTR Yogyakarta)
+          </span>
+        </p>
+        <p className="mt-8 text-green-600 font-medium">
+          Stok tersedia dan siap kirim! Dapatkan unit Anda sekarang.
+        </p>
+        <p className="mt-1 text-sm text-gray-500">
+          *Harga dapat berubah sewaktu-waktu. Hubungi sales kami untuk penawaran
+          terbaik dan promo terbaru.
+        </p>
+        {/* component varian mobil */}
+        <div className="mt-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
+            Pilih Tipe {car.name}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {car.variants.map((variant) => (
+              <div
+                key={variant.type}
+                className={`cursor-pointer border rounded-lg px-4 py-2 ${
+                  selectedVariant === variant
+                    ? "border-blue-600 bg-blue-50 shadow-md"
+                    : "border-gray-300 bg-white hover:border-gray-400 hover:shadow-sm"
+                }`}
+                onClick={() => setSelectedVariant(variant)}
+              >
+                {/* <p className="text-sm font-bold">{variant.type}</p>
+                <p className="mt-2 text-sm font-semibold text-gray-500">
+                  {formatRupiah(variant.price)}
+                </p> */}
 
-  if (!car) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-8">
-        <div className="text-center bg-white p-8 rounded-lg shadow-xl">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Mobil Tidak Ditemukan</h1>
-          <p className="text-lg text-gray-600 mb-6">Mohon maaf, data mobil yang Anda cari tidak tersedia atau sudah tidak dipasarkan.</p>
-          <Link
-            href="/hargamobil"
-            className="inline-block bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out shadow-md"
+                <p className="text-lg font-bold text-gray-900">
+                  {variant.type}
+                </p>
+                <p className="mt-1 text-md font-semibold text-gray-700">
+                  {formatRupiah(variant.price)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2 mt-18">
+          
+          <a
+            href={CHAT_WHATSAPP.KONSULTASI_KREDIT(car.id)}
+            className="inline-flex items-center justify-center border border-blue-600 text-blue-600 font-semibold rounded-full py-4 px-6 hover:bg-blue-100 transition"
           >
-            Lihat Semua Daftar Harga Mobil Suzuki
-          </Link>
+            Simulasi Kredit {car.name}
+          </a>
+          <a
+            href={CHAT_WHATSAPP.BELI_MOBIL(car.name)}
+            className="mt-2 inline-flex items-center justify-center rounded-full py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-400 transition"
+          >
+            Pesan {car.name} Sekarang
+          </a>
         </div>
       </div>
-    );
-  }
-  return (
-    <ProductDetailsClient
-      carData={car}
-      initialSelectedVariant={car.variants.length > 0 ? car.variants[0] : null}
-    />
+    </div>
   );
 }

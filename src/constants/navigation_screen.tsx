@@ -1,7 +1,7 @@
 export const NavigationScreen = {
   Homepage: "/",
   Pricelist: "/hargamobil",
-  CarDetail: (id: string | number) => `/hargamobil/detail/${id}`,
+  CarDetail: (id: string) => `/hargamobil/detail/${id}`,
   Testimoni: "/testimoni",
   SimulasiKredit: "/simulasikredit",
   About: "/tentang",
