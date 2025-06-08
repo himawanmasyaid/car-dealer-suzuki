@@ -1,7 +1,7 @@
 import React from "react";
 import CarPriceCard from "@/components/card/card_car_price";
-import { cars_price_starter } from "@/data/cars";
 import type { Metadata } from 'next';
+import { DataPriceList } from "@/data/data_pricelist";
 
 export const metadata: Metadata = {
   title: "Daftar Harga Mobil Suzuki Terbaru di Jogja 2025 | Promo & Cicilan Ringan",
@@ -44,7 +44,7 @@ const HargaMobilPage: React.FC = () => {
         </h3>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-2">
-          {cars_price_starter.map((car) => (
+          {DataPriceList.map((car) => (
             <CarPriceCard
               key={car.id}
               id={car.id}
