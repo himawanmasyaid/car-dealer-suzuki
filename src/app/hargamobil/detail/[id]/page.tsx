@@ -4,11 +4,15 @@ import { CHAT_WHATSAPP, formatRupiah, imageAlt } from "@/constants/constants";
 import { DataPriceList } from "@/data/data_pricelist";
 import { useState } from "react";
 
-interface Params {
+interface ProductPageParams {
   id: string;
 }
 
-export default function ProductOverview({ params }: { params: Params }) {
+interface ProductOverviewPageProps {
+  params: ProductPageParams;
+}
+
+export default function ProductOverview({ params }: ProductOverviewPageProps) {
   const car = DataPriceList.find((c) => c.id === params.id);
   const [selectedVariant, setSelectedVariant] = useState(
     car?.variants?.[0] ?? null
