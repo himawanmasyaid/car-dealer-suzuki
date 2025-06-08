@@ -8,7 +8,6 @@ type TestimoniCardProps = {
 
 const TestimoniCard: React.FC<TestimoniCardProps> = ({ testimoni }) => {
   return (
-    // <div className="bg-white rounded-xl inset-shadow-2xs shadow-md overflow-hidden p-4 mt-10 flex flex-col max-w-[256px]">
     <div className="bg-white rounded-xl inset-shadow-2xs shadow-md overflow-hidden p-4 mt-10 flex flex-col">
       <div className="h-72 flex items-center justify-center overflow-hidden">
         <img

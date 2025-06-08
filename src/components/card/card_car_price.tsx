@@ -33,7 +33,7 @@ const CarPriceCard: React.FC<CarPriceCardProps> = ({
           href={NavigationScreen.CarDetail(id)}
           className="inline-flex items-center justify-center font-medium border border-gray-500 text-black rounded-full py-4 px-6 hover:bg-gray-100 transition"
         >
-          Lihat Detail
+          Lihat detail
         </a>
         <a
           href={CHAT_WHATSAPP.DETAIL_MOBIL(name)}

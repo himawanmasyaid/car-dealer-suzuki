@@ -17,7 +17,7 @@ export const DataTestimoniList:  TestimoniModel[] = [
     address: "Yogyakarta",
   },
     {
-    name: "Pak Imam, 54 tahun, Yogyakarta",
+    name: "Pak Imam",
     image: "testimoni-imam-carry-jogja.jpeg",
     testimoni: "Saya sangat puas setelah membeli Carry Box BGN ini. Ukurannya pas di mobil, bahannya kokoh dan tahan cuaca. Sangat membantu untuk bawa barang tambahan saat perjalanan jauh. Proses pemasangannya juga gampang, nggak ribet sama sekali. Sekarang tiap kali road trip, bawaan jadi lebih teratur dan aman. Recommended banget buat yang butuh ruang ekstra di mobil!",
     car: "Carry",
