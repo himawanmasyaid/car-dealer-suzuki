@@ -3,6 +3,8 @@ import React from "react";
 // import TestimonialOffWhiteGrid from "./testimonial_white_off_grid";
 import PriceList from "./pricelist";
 import Hero from "./hero";
+import Testimoni from "./testimoni";
+import Cta from "./cta";
 
 export default function Home() {
   return (
@@ -14,12 +16,12 @@ export default function Home() {
         <section id="pricelist">
           <PriceList />
         </section>
-        {/* <section id="testimoni">
-          <TestimonialOffWhiteGrid />
+        <section id="testimoni">
+          <Testimoni />
         </section>
         <section id="cta">
           <Cta />
-        </section> */}
+        </section>
       </main>
     </div>
   );

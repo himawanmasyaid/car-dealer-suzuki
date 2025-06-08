@@ -1,4 +1,3 @@
-   // components/Card.js
 export default function CardNewCar() {
      return (
        <div className="max-w-sm mx-auto bg-white inset-shadow-2xs rounded-xl shadow-md overflow-hidden md:max-w-2xl">

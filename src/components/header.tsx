@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
-import { NavigationScreen } from "@/constants/navigation_screen";
+import { navigationLinkList } from "@/constants/navigation_screen";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { URLS } from "@/constants/constants";
@@ -10,13 +10,6 @@ import React from "react";
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const menuItems = [
-    { label: "Beranda", href: NavigationScreen.Homepage },
-    { label: "Harga Mobil", href: NavigationScreen.Pricelist },
-    { label: "Testimoni", href: NavigationScreen.Testimoni },
-    { label: "Simulasi Kredit", href: NavigationScreen.SimulasiKredit },
-    { label: "Tentang Sales", href: NavigationScreen.About },
-  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white">
@@ -41,7 +34,7 @@ const Header: React.FC = () => {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          {menuItems.map((item) => (
+          {navigationLinkList.map((item) => (
             <Link
               key={item.label}
               href={item.href}
@@ -84,7 +77,7 @@ const Header: React.FC = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {menuItems.map((item) => (
+                {navigationLinkList.map((item) => (
                   <Link
                     key={item.label}
                     href={item.href}
