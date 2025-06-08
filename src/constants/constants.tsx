@@ -7,29 +7,29 @@ export const URLS = {
 export const CHAT_WHATSAPP = {
   KONSULTASI: (() => {
     const message =
-      `Halo Mas Regi,%0A` +
+      `Halo Mas Regi,` +
       `Saya lihat website JogjaSuzuki.com dan ingin tanya-tanya soal mobil Suzuki, bisa dibantu?`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   })(),
   PROMO: (() => {
     const message =
-      `Halo Mas Regi,%0A` +
-      `Saya melihat website JogjaSuzuki.com dan ingin tanya-tanya tentang promo mobil Suzuki yang tersedia saat ini.%0A` +
+      `Halo Mas Regi,` +
+      `Saya melihat website JogjaSuzuki.com dan ingin tanya-tanya tentang promo mobil Suzuki yang tersedia saat ini.` +
       `Boleh minta info lengkapnya? Terima kasih.`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   })(),
 
   DETAIL_MOBIL: (carName: string) => {
     const message =
-      `Halo Mas Regi,%0A` +
+      `Halo Mas Regi,` +
       `Saya lihat website JogjaSuzuki.com dan ingin tanya-tanya soal mobil ${carName}, bisa dibantu?`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
 
   TEST_DRIVE_MOBIL: (carName: string) => {
     const message =
-      `Halo Mas Regi,%0A` +
-      `Saya melihat website JogjaSuzuki.com dan tertarik untuk melakukan test drive mobil ${carName}.%0A` +
+      `Halo Mas Regi,` +
+      `Saya melihat website JogjaSuzuki.com dan tertarik untuk melakukan test drive mobil ${carName}.` +
       `Bisakah saya dijadwalkan test drive di area Jogja?`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
@@ -49,14 +49,14 @@ export const CHAT_WHATSAPP = {
     }).format(dp);
     // Pesan yang akan dikirim ke WhatsApp
     const message =
-      `Halo Mas Regi,%0A` +
-      `Saya ingin dibantu simulasi kredit mobil Suzuki.%0A%0A` +
-      `Berikut detail informasinya:%0A` +
-      `Model: ${encodeURIComponent(model)}%0A` +
-      `Tipe: ${encodeURIComponent(type)}%0A` +
-      `Harga: ${encodeURIComponent(formattedHarga)}%0A` +
-      `DP: ${encodeURIComponent(formattedDp)}%0A%0A` +
-      `Mohon bantuannya untuk info cicilan dan tenor lebih lanjut.%0A` +
+      `Halo Mas Regi, ` +
+      `Saya ingin dibantu simulasi kredit mobil Suzuki.` +
+      `Berikut detail informasinya:` +
+      `Model: ${encodeURIComponent(model)}` +
+      `Tipe: ${encodeURIComponent(type)}` +
+      `Harga: ${encodeURIComponent(formattedHarga)}` +
+      `DP: ${encodeURIComponent(formattedDp)}` +
+      `Mohon bantuannya untuk info cicilan dan tenor lebih lanjut.` +
       `Terima kasih.`;
 
     return `${BASE_CHAT_URL}${message}`;
@@ -64,17 +64,17 @@ export const CHAT_WHATSAPP = {
 
   KONSULTASI_KREDIT: (carName: string) => {
     const message =
-      `Halo Mas Regi,%0A` +
-      `Saya melihat website JogjaSuzuki.com dan ingin konsultasi mengenai kredit mobil Suzuki ${carName}.%0A` +
-      `Bisa dibantu dengan informasi syarat, proses, dan penawaran terbaiknya?%0A` +
+      `Halo Mas Regi, ` +
+      `Saya melihat website JogjaSuzuki.com dan ingin konsultasi mengenai kredit mobil Suzuki ${carName}.` +
+      `Bisa dibantu dengan informasi syarat, proses, dan penawaran terbaiknya?` +
       `Terima kasih.`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
 
   BELI_MOBIL: (carName: string) => {
     const message =
-      `Halo Mas Regi,%0A` +
-      `Saya tertarik untuk membeli mobil Suzuki ${carName} dan ingin bertanya lebih lanjut.%0A` +
+      `Halo Mas Regi, ` +
+      `Saya tertarik untuk membeli mobil Suzuki ${carName} dan ingin bertanya lebih lanjut.` +
       `Bisakah Anda bantu dengan informasinya? Terima kasih.`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
