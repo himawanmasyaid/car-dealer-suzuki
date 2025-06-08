@@ -1,14 +1,12 @@
 import { DataPriceList } from "@/data/data_pricelist";
 import CarDetailClient from "./car_detail_client";
 
-interface ProductDetailProps {
-  params: { id: string };
-}
+export default async function ProductDetail(props: {
+  params: Promise<{ slug: string }>;
+}) {
 
-export default async function ProductDetail({ params }: ProductDetailProps) {
-
-  const id = params.id;
-  const car = DataPriceList.find((c) => c.id === id);
+  const params = await props.params;
+  const car = await DataPriceList.find((c) => c.id === params.slug);
 
   if (!car) {
     return <div>Mobil tidak ditemukan</div>;
