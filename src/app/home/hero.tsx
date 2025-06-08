@@ -1,4 +1,6 @@
 import { CHAT_WHATSAPP } from "@/constants/constants";
+import Image from 'next/image';
+
 
 const Hero: React.FC = () => {
   return (
@@ -34,11 +36,15 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-          <img
-            alt="Suzuki Fronx terbaru di Jogja, mobil Suzuki untuk keluarga modern."
-            src="images/fronx.webp"
-            // className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
-          />
+          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden flex items-center justify-center">
+            <Image
+              alt="Suzuki Fronx terbaru di Jogja, mobil Suzuki untuk keluarga modern."
+              src="/images/fronx.webp"
+              fill // Properti `fill` membuat gambar mengisi parent
+              priority
+              className="object-contain" // Gambar akan skala agar pas di dalam wadah tanpa terpotong
+            />
+          </div>
         </div>
       </div>
     </div>
