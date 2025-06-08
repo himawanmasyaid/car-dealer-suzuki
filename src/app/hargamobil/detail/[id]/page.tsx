@@ -7,7 +7,7 @@ interface ProductDetailProps {
 
 export default async function ProductDetail({ params }: ProductDetailProps) {
 
-  const { id } = await params;
+  const id = params.id;
   const car = DataPriceList.find((c) => c.id === id);
 
   if (!car) {
