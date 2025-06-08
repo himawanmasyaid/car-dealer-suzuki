@@ -5,7 +5,7 @@ import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { navigationLinkList } from "@/constants/navigation_screen";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { URLS } from "@/constants/constants";
+import { CHAT_WHATSAPP } from "@/constants/constants";
 import React from "react";
 
 const Header: React.FC = () => {
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href={URLS.CHAT_WHATSAPP}
+            href={CHAT_WHATSAPP.KONSULTASI}
             className="inline-flex items-center justify-center rounded-full bg-green-600 px-6 py-2 text-sm font-semibold text-white hover:bg-green-700 transition"
           >
             Hubungi Whatsapp
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
               </div>
               <div className="py-6">
                 <a
-                  href={URLS.CHAT_WHATSAPP}
+                  href={CHAT_WHATSAPP.KONSULTASI}
                   className="w-full inline-flex items-center justify-center rounded-full px-5 py-2.5 text-base font-semibold text-white bg-green-600 transition"
                 >
                   Hubungi Whatsapp

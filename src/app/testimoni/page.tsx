@@ -1,5 +1,28 @@
 import TestimoniHorizontalCard from "@/components/card/card_testimoni_horizontal";
 import { DataTestimoniList } from "@/data/data_testimoni";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Testimoni Pelanggan Suzuki Jogja | Kisah Senyum Puas Pembeli Mobil",
+  description: "Lihat testimoni dan cerita kebahagiaan dari para pelanggan setia Jogja Suzuki yang telah sukses memiliki mobil Suzuki impian mereka. Bukti layanan terbaik dan kepuasan pelanggan di Yogyakarta.",
+  keywords: "testimoni suzuki jogja, pengalaman beli mobil suzuki, review dealer suzuki jogja, kepuasan pelanggan suzuki, cerita pelanggan mobil suzuki yogyakarta, serah terima mobil suzuki, bukti beli mobil suzuki",
+  openGraph: {
+    title: "Testimoni Pelanggan Suzuki Jogja | Kisah Senyum Puas Pembeli Mobil",
+    description: "Lihat testimoni dan cerita kebahagiaan dari para pelanggan setia Jogja Suzuki yang telah sukses memiliki mobil Suzuki impian mereka. Bukti layanan terbaik dan kepuasan pelanggan di Yogyakarta.",
+    url: "https://jogjasuzuki.com/testimoni", // Ganti dengan URL aktual halaman testimoni Anda
+    siteName: "Jogja Suzuki Resmi",
+    images: [
+      {
+        url: "https://jogjasuzuki.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Senyum Pelanggan Setelah Beli Mobil Suzuki Jogja",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+};
 
 export default function TestimoniPage() {
   return (

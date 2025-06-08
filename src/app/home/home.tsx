@@ -1,6 +1,4 @@
 import React from "react";
-// import Cta from "./cta";
-// import TestimonialOffWhiteGrid from "./testimonial_white_off_grid";
 import PriceList from "./pricelist";
 import Hero from "./hero";
 import Testimoni from "./testimoni";

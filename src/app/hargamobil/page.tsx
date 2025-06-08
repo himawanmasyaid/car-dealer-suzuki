@@ -1,6 +1,29 @@
 import React from "react";
 import CarPriceCard from "@/components/card/card_car_price";
 import { cars_price_starter } from "@/data/cars";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Daftar Harga Mobil Suzuki Terbaru di Jogja 2025 | Promo & Cicilan Ringan",
+  description: "Dapatkan daftar harga mobil Suzuki terbaru 2025 di Jogja. Temukan penawaran terbaik untuk Ertiga, XL7, Jimny, Grand Vitara, Fronx, dan model lainnya. Tersedia promo spesial dan simulasi cicilan ringan di Dealer Resmi Jogja Suzuki.",
+  keywords: "daftar harga mobil suzuki jogja, harga suzuki yogyakarta 2025, promo mobil suzuki jogja, cicilan suzuki jogja, kredit suzuki jogja, harga ertiga jogja, harga xl7 jogja, harga jimny jogja, harga grand vitara jogja, harga fronx jogja, harga carry jogja, dealer suzuki jogja",
+  openGraph: {
+    title: "Daftar Harga Mobil Suzuki Terbaru di Jogja 2025 | Promo & Cicilan Ringan",
+    description: "Lihat daftar harga lengkap mobil Suzuki terbaru di Yogyakarta, termasuk promo dan penawaran cicilan menarik. Temukan mobil impian Anda di Jogja Suzuki.",
+    url: "https://jogjasuzuki.com/harga-mobil",
+    siteName: "Jogja Suzuki Resmi",
+    images: [
+      {
+        url: "https://jogjasuzuki.com/og-image.jpg", // Gambar OG khusus daftar harga
+        width: 1200,
+        height: 630,
+        alt: "Daftar Harga Mobil Suzuki Terbaru di Jogja",
+      },
+    ],
+    locale: "id_ID",
+    type: "website",
+  },
+};
 
 const HargaMobilPage: React.FC = () => {
   {
