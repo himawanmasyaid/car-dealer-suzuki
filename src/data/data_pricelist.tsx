@@ -1,5 +1,25 @@
 import { CategoryCar } from "./category_car";
 
+export interface CarImage {
+  image: string;
+  alt?: string;
+}
+
+export interface CarVariant {
+  type: string;
+  price: number;
+}
+
+export interface CarModel {
+  id: string;
+  name: string;
+  category: CategoryCar;
+  price_start: number;
+  image: string;
+  image_all?: CarImage[]
+  variants: CarVariant[];
+}
+
 export const DataPriceList = [
   {
     id: "fronx",
