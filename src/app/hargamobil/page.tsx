@@ -28,14 +28,12 @@ export const metadata: Metadata = {
 const HargaMobilPage: React.FC = () => {
   {
     return (
-      <div className="bg-white-50 sm:py-32 px-2">
-        <div className="mx-auto max-w-2xl px-2 lg:max-w-7xl lg:px-8"></div>
-
-        <h1 className="uppercase text-center text-base font-semibold text-blue-900">
+    <div className="bg-white-50 py-18 mb-18 px-2">
+        <h1 className="uppercase text-center px-16 md:px-0 lg:px-0 text-base font-semibold text-blue-900">
           Daftar Harga Mobil Suzuki Terbaru di Jogja 2025
         </h1>
         <h2 className="mx-auto mt-4 text-center text-5xl font-bold tracking-tight text-balance text-gray-950 sm:text-5xl">
-          Temukan mobil Suzuki impian Anda
+          Temukan Mobil Suzuki Impian Anda
         </h2>
         <h3 className="mx-auto mt-6 text-xl tracking-tight text-center max-w-3xl text-gray-400">
           Mulai dari mobil keluarga yang nyaman hingga SUV tangguh untuk

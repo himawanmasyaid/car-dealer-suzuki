@@ -13,17 +13,7 @@ const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Kolom 1: Logo & Deskripsi Singkat */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            {/* <div className="flex lg:flex-1">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  alt="logo suzuki"
-                  src="/suzuki.svg"
-                  className="h-6 w-auto"
-                />
-              </a>
-            </div> */}
+          <div className="flex flex-col text-left md:items-start md:text-left">
             <p className="text-sm leading-relaxed">
               Dealer Resmi Mobil Suzuki di Yogyakarta. Melayani penjualan mobil
               baru, promo menarik, dan layanan purna jual profesional.

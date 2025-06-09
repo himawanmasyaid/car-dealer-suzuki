@@ -27,8 +27,6 @@ export const metadata: Metadata = {
 export default function TestimoniPage() {
   return (
     <div className="bg-white-50 py-18 mb-18 px-2">
-      <div className="mx-auto max-w-2xl px-2 lg:max-w-7xl lg:px-8"></div>
-
       <h1 className="uppercase text-center text-base font-semibold text-blue-900">
         Testimoni Pelanggan
       </h1>
