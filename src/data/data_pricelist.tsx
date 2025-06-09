@@ -127,7 +127,7 @@ export const DataPriceList = [
       { type: "NEW CARRY PU WD AC PS", price: 187400000 },
     ],
   },
-  {
+{
     id: "apv",
     name: "APV",
     category: CategoryCar.Minibus,
@@ -135,11 +135,11 @@ export const DataPriceList = [
     image: "apv.webp",
     variants: [
       { type: "APV GA", price: 226350000 },
-      { type: "Arena GA", price: 195000000 },
-      { type: "Arena GL", price: 205000000 },
-      { type: "SGX MT", price: 215000000 },
+      { type: "Arena GA", price: 235550000},
+      { type: "Arena GL", price: 248650000 },
+      { type: "SGX MT", price: 251950000 },
     ],
-  },
+  }
 ];
 
 // dummy version

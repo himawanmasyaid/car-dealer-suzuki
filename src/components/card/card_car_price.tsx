@@ -1,3 +1,4 @@
+import { trackContactSales, trackViewCarDetail } from "@/constants/analytic";
 import { CHAT_WHATSAPP, formatRupiah, imageAlt } from "@/constants/constants";
 import { NavigationScreen } from "@/constants/navigation_screen";
 import React from "react";
@@ -20,14 +21,16 @@ const CarPriceCard: React.FC<CarPriceCardProps> = ({
   return (
     <div className="bg-white rounded-xl inset-shadow-2xs shadow-md overflow-hidden p-4 mt-10 flex flex-col">
       <div className="w-full h-64 flex items-end justify-center">
-        <img src={`images/${image}`} alt={imageAlt(name)} className="h-48 object-cover" />
+        <img
+          src={`images/${image}`}
+          alt={imageAlt(name)}
+          className="h-48 object-cover"
+        />
       </div>
 
       <h3 className="text-2xl font-bold mt-12">{name}</h3>
       <p className="font-semibold text-sm mb-2">{category}</p>
-      <p className="text-lg mb-4">
-        Mulai {formatRupiah(price_start)}
-      </p>
+      <p className="text-lg mb-4">Mulai {formatRupiah(price_start)}</p>
       <div className="flex flex-col gap-2 mt-2">
         <a
           href={NavigationScreen.CarDetail(id)}

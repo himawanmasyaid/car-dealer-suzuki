@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-    robots: {
+  robots: {
     index: true,
     follow: true,
     nocache: false,
@@ -88,9 +89,9 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       noimageindex: false,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
@@ -109,7 +110,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <main className="w-full">{children}</main>
+        <body className="w-full">{children}</body>
+        <GoogleAnalytics gaId="G-YBTYTLTPGR" />
         <Footer />
       </body>
     </html>

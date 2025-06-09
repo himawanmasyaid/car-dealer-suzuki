@@ -7,25 +7,25 @@ export const URLS = {
 export const CHAT_WHATSAPP = {
   KONSULTASI: (() => {
     const message = `Halo Mas Regi
-    Saya lihat website JogjaSuzuki.com dan ingin tanya-tanya soal mobil Suzuki, bisa dibantu?`;
+    Saya lihat website jogjasuzuki.com dan ingin tanya-tanya soal mobil Suzuki, bisa dibantu?`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   })(),
   PROMO: (() => {
     const message = `Halo Mas Regi,
-      Saya melihat website JogjaSuzuki.com dan ingin tanya-tanya tentang promo mobil Suzuki yang tersedia saat ini
+      Saya melihat website jogjasuzuki.com dan ingin tanya-tanya tentang promo mobil Suzuki yang tersedia saat ini
       Boleh minta info lengkapnya? Terima kasih.`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   })(),
 
   DETAIL_MOBIL: (carName: string) => {
     const message = `Halo Mas Regi
-      Saya lihat website JogjaSuzuki.com dan ingin tanya-tanya soal mobil ${carName}, bisa dibantu?`;
+      Saya lihat website jogjasuzuki.com dan ingin tanya-tanya soal mobil ${carName}, bisa dibantu?`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
 
   TEST_DRIVE_MOBIL: (carName: string) => {
     const message = `Halo Mas Regi
-      Saya melihat website JogjaSuzuki.com dan tertarik untuk melakukan test drive mobil ${carName}
+      Saya melihat website jogjasuzuki.com dan tertarik untuk melakukan test drive mobil ${carName}
       Bisakah saya dijadwalkan test drive di area Jogja?`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
@@ -58,7 +58,7 @@ export const CHAT_WHATSAPP = {
 
   KONSULTASI_KREDIT: (carName: string) => {
     const message = `Halo Mas Regi
-      Saya melihat website JogjaSuzuki.com dan ingin konsultasi mengenai kredit mobil Suzuki ${carName}.
+      Saya melihat website jogjasuzuki.com dan ingin konsultasi mengenai kredit mobil Suzuki ${carName}.
       Bisa dibantu dengan informasi syarat, proses, dan penawaran terbaiknya?
       Terima kasih.`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;

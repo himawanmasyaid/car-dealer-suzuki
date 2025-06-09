@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                 className={`text-sm uppercase transition hover:text-blue-500 ${
                   isActive
                     ? "font-bold text-gray-900"
-                    : "font-normal text-gray-700"
+                    : "font-medium text-gray-700"
                 }`}
               >
                 {item.label}
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                       className={`-mx-3 block rounded-lg px-3 py-2 text-base uppercase transition hover:bg-gray-50 ${
                         isActive
                           ? "font-bold text-gray-900"
-                          : "font-normal text-gray-700"
+                          : "font-medium text-gray-700"
                       }`}
                     >
                       {item.label}
