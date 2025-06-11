@@ -56,18 +56,18 @@ export const CHAT_WHATSAPP = {
     return `${BASE_CHAT_URL}${message}`;
   },
 
-  KONSULTASI_KREDIT: (carName: string) => {
-    const message = `Halo Mas Regi
-      Saya melihat website jogjasuzuki.com dan ingin konsultasi mengenai kredit mobil Suzuki ${carName}.
+  KONSULTASI_KREDIT: (carName: string, type: string, region: string, price: number) => {
+    const message = `Halo Mas Regi\n
+Saya melihat website jogjasuzuki.com dan ingin konsultasi mengenai kredit mobil Suzuki ${carName} varian ${type} untuk wilayah ${region}. Saya lihat harganya sekitar ${formatRupiah(price)}.
       Bisa dibantu dengan informasi syarat, proses, dan penawaran terbaiknya?
       Terima kasih.`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
 
-  BELI_MOBIL: (carName: string) => {
-    const message = `Halo Mas Regi,
-      Saya tertarik untuk membeli mobil Suzuki ${carName} dan ingin bertanya lebih lanjut.
-      Bisakah Anda bantu dengan informasinya? Terima kasih.`;
+  BELI_MOBIL: (carName: string, type: string, region: string, price: number) => {
+  const message = `Halo Mas Regi,\nSaya melihat website jogjasuzuki.com\nSaya tertarik dengan mobil Suzuki ${carName} varian ${type} untuk wilayah ${region}. Saya lihat harganya sekitar ${formatRupiah(price)}.
+Bolehkah saya mendapatkan informasi lebih lanjut mengenai promo, stok, dan proses pembeliannya?
+Terima kasih 🙏`;
     return `${BASE_CHAT_URL}${encodeURIComponent(message)}`;
   },
 };
