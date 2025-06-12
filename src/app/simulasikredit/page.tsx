@@ -10,7 +10,9 @@ export default function SimulasiKreditPage() {
   const [carPrice, setCarPrice] = useState<number | null>(null);
   const [downPaymentInput, setDownPaymentInput] = useState<string>("");
   const [downPaymentNumeric, setDownPaymentNumeric] = useState<number>(0);
-
+  const [selectedRegion, setSelectedRegion] = useState<"jogja" | "kedu">(
+    "jogja"
+  );
   // Reset variant and price when model changes
   useEffect(() => {
     setSelectedVariant(null);
@@ -24,7 +26,7 @@ export default function SimulasiKreditPage() {
       const variantData = modelData?.variants.find(
         (v) => v.type === selectedVariant
       );
-      setCarPrice(variantData ? variantData.price : null);
+      setCarPrice(variantData ? variantData.otr.jogja : null);
     }
   }, [selectedModel, selectedVariant]);
 
