@@ -30,7 +30,7 @@ export const DataPriceList = [
     price_start: 263800000,
     otr_start: { jogja: 263800000, kedu: 271500000 },
     image: "fronx.webp",
-    brosur: "",
+    brosur: "suzuki_fronx_brosur.pdf",
     image_all: [{ image: "fronx.webp" }],
     variants: [
       {
@@ -69,25 +69,25 @@ export const DataPriceList = [
     price_start: 263200000,
     otr_start: { jogja: 263200000, kedu: 274200000 },
     image: "ertiga.webp",
-    brosur: "",
+    brosur: "ertiga_hybrid_brochure_1721793313877.pdf",
     variants: [
       {
-        type: "ALL NEW ERTIGA GL MT",
+        type: "GL MT",
         price: 263200000,
         otr: { jogja: 263200000, kedu: 274200000 },
       },
       {
-        type: "ALL NEW ERTIGA GL AT",
+        type: "GL AT",
         price: 274200000,
         otr: { jogja: 274200000, kedu: 290700000 },
       },
       {
-        type: "ALL NEW ERTIGA GX MT HYBRID",
+        type: "GX MT HYBRID",
         price: 283900000,
         otr: { jogja: 283900000, kedu: 293200000 },
       },
       {
-        type: "ALL NEW ERTIGA GX AT HYBRID",
+        type: "GX AT HYBRID",
         price: 295000000,
         otr: { jogja: 295000000, kedu: 304800000 },
       },
@@ -117,7 +117,7 @@ export const DataPriceList = [
     price_start: 266900000,
     otr_start: { jogja: 266900000, kedu: 278000000 },
     image: "xl7.webp",
-    brosur: "",
+    brosur: "new-XL7-hybride-brochure_1701949135372.pdf",
     variants: [
       {
         type: "XL7 ZETA MT",
@@ -165,7 +165,7 @@ export const DataPriceList = [
     price_start: 366725000,
     otr_start: { jogja: 366725000, kedu: 391725000 },
     image: "grand_vitara.webp",
-    brosur: "",
+    brosur: "brosur_grandvitara_1711950919637.pdf",
     variants: [
       {
         type: "GRAND VITARA GL AT",
@@ -193,7 +193,7 @@ export const DataPriceList = [
     price_start: 178250000,
     otr_start: { jogja: 178250000, kedu: 179550000 },
     image: "spresso.webp",
-    brosur: "",
+    brosur: "brosur_spresso_1723697269550.pdf",
     variants: [
       {
         type: "S‑PRESSO MT",
@@ -216,7 +216,7 @@ export const DataPriceList = [
     price_start: 473900000,
     otr_start: { jogja: 473900000, kedu: 488100000 },
     image: "jimny.webp",
-    brosur: "",
+    brosur: "jimny1_1723697158910.pdf",
     variants: [
       {
         type: "JIMNY 5 DOOR MT",
