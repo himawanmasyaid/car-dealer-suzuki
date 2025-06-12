@@ -20,6 +20,7 @@ const PriceList: React.FC = () => {
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-2">
         {DataPriceList.map((car) => (
+          
           <CarPriceCard
             key={car.id}
             id={car.id}

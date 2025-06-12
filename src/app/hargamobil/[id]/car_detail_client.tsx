@@ -5,7 +5,6 @@ import { formatRupiah, CHAT_WHATSAPP, imageAlt } from "@/constants/constants";
 
 interface Variant {
   type: string;
-  price: number;
   otr: {
     jogja: number;
     kedu: number;
