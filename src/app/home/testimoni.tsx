@@ -25,7 +25,7 @@ const Testimoni: React.FC = () => {
       <div className="mt-12 max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 justify-items-center">
         {DataTestimoniList.map((testimoni) => (
           <TestimoniCard
-            key={testimoni.name} // Pastikan untuk memberikan key yang unik
+            key={testimoni.name}
             testimoni={testimoni}
           />
         ))}

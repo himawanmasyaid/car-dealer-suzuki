@@ -10,6 +10,9 @@ const leasingPartners = [
   { name: "Indomobil Finance", image: "/images/indomobil-finance.jpeg" },
   { name: "Adira Finance", image: "/images/logo-adira-finance.png" },
   { name: "OTO Finance", image: "/images/oto-finance.jpeg" },
+  { name: "Maybank", image: "/images/logo-maybank.png" },
+  { name: "Mandiri Utama Finance", image: "/images/logo-mandiri-utama-finance.png" },
+
 ];
 
 const LeasingPartner: React.FC = () => {
@@ -27,7 +30,7 @@ const LeasingPartner: React.FC = () => {
         </h4>
       </div>
 
-      <div className="mt-24 px-4 grid grid-cols-2 gap-12 justify-center items-center md:grid-cols-3 xl:grid-cols-6">
+      <div className="mt-24 px-4 grid grid-cols-2 gap-12 justify-center items-center md:grid-cols-3 xl:grid-cols-4">
         {leasingPartners.map((partner, index) => (
           <div key={index} className="flex justify-center items-center">
             <img
